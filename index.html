@@ -685,12 +685,17 @@ const store = {
 };
 
 /* ===================== Links relacionados ===================== */
+const LINK_ELNINO_IMPACTOS = "https://marceloabelheira-cmd.github.io/comparativoELNINO_outroseventos/";
 const LINK_MONITORA = "https://cisshiny.saude.rj.gov.br/excesso_calor/";
 function relacionadosHTML(){
-  return `<div class="links2" style="grid-template-columns:1fr">
+  return `<div class="links2">
     <a class="macro-link ext saude" href="${LINK_MONITORA}" target="_blank" rel="noopener">
       <div class="icon">${icon('pulse')}</div>
       <div class="macro-text"><span class="owner">Secretaria de Estado de Saúde do RJ</span><h3>Monitora RJ — Excesso de Calor</h3><p>Painel da Secretaria de Estado de Saúde com o IMEC e o EHF por município.</p></div>
+      <div class="go">${icon('external')}</div></a>
+    <a class="macro-link ext icr" href="${LINK_ELNINO_IMPACTOS}" target="_blank" rel="noopener">
+      <div class="icon">${icon('chart')}</div>
+      <div class="macro-text"><span class="owner">Comitê Estadual El Niño</span><h3>IMPACTOS DO EL NIÑO NO ESTADO DO RJ EM 2015/2016 e 2023/2024</h3><p>Painel com os impactos do fenômeno El Niño em eventos anteriores no estado do Rio de Janeiro.</p></div>
       <div class="go">${icon('external')}</div></a>
   </div>`;
 }
@@ -944,7 +949,7 @@ home:{ crumb:"Início", render:()=>`
     <div class="macro-text"><h3>Calculadora de Priorização de PCEC</h3><p>Pontue os nove critérios e obtenha na hora a faixa de Exposição e Vulnerabilidade, a prioridade e o nível de ART orientado.</p></div>
     <div class="go">Abrir ${icon('chevron')}</div>
   </div>
-  <div class="macro-divider">Monitoramento do calor</div>
+  <div class="macro-divider">Links relacionados</div>
   ${relacionadosHTML()}
   <div class="macro-divider">Conteúdo complementar</div>
   <div class="links2">
@@ -1190,7 +1195,7 @@ acionamento:{ crumb:"Funcionamento da Rede", render:()=>`
     "Reforçar a campanha a cada período em que o critério for atingido."])}</div>
   <div class="section-sub">6.4 · Nota técnica: umidade como complemento opcional</div>
   <div class="panel"><p>O critério obrigatório é a temperatura de 35 °C. Em dias de alta umidade relativa do ar, porém, o desconforto e o risco à saúde podem ocorrer mesmo com temperatura inferior a 35 °C, pois o suor evapora com mais dificuldade. Municípios que desejarem maior sensibilidade podem adotar, como complemento opcional, o índice de calor (combinação de temperatura e umidade), mas o critério mínimo e obrigatório da rede permanece sendo a temperatura de 35 °C.</p></div>
-  <div class="macro-divider">Monitoramento do calor</div>
+  <div class="macro-divider">Links relacionados</div>
   ${relacionadosHTML()}
 `},
 
